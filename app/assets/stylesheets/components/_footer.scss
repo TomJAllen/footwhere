@@ -1,0 +1,22 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: lightblue;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-icons {
+  font-size: 35px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
