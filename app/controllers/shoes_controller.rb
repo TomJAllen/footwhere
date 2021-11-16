@@ -13,7 +13,7 @@ class ShoesController < ApplicationController
   end
 
   def destroy
-    @restaurant.destroy
+    @shoe.destroy
   end
 
   def show
