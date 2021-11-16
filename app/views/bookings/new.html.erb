@@ -1,5 +1,26 @@
-<%= simple_form_for [@shoe, @booking], url: shoe_bookings_path do |f|%>
-  <%= f.input :date, as: :date, label: "Rental start date" %>
-  <%= f.input :duration, label: "Rental duration (days)"%>
-  <%= f.button :submit%>
-<% end %>
+<div class="form-with-details">
+
+  <div class="shoe-info">
+      <div class="image">
+        <%= image_tag(@shoe.image_url, size: "250x250")%>
+      </div>
+    <div class="details-container">
+      <ul class="details">
+        <li><h4 class="title"><%= @shoe.title%></h4></li>
+        <li class="detail">Brand: <%= @shoe.brand %></li>
+        <li class="detail">Category: <%= @shoe.category %></li>
+        <li class="detail">Size (UK): <%= @shoe.size %></li>
+      </ul>
+      <span class="price"><%= @shoe.price %>.00 /day</span>
+    </div>
+  </div>
+
+  <div class="booking-form-div">
+    <%= simple_form_for [@shoe, @booking], url: shoe_bookings_path, html: { class: "booking-form"} do |f|%>
+      <%= f.input :date, as: :date, label: "Rental start date", :input_html => { class: 'field' } %>
+      <%= f.input :duration, label: "Rental duration (days)", :input_html => { class: 'field' } %>
+      <%= f.button :submit, 'Book now!',  class: "submit-button booking-submit"  %>
+    <% end %>
+  </div>
+
+</div>

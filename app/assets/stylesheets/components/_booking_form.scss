@@ -1,0 +1,74 @@
+.form-with-details {
+  display: flex;
+  height: 700px;
+  width: 900px;
+  margin: 30px auto;
+  margin-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-form-div {
+  justify-self: flex-start;
+  display: flex;
+  width: 800px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.booking-form {
+  flex-grow: 1;
+}
+
+.shoe-info {
+  justify-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+  width: 800px;
+  height: 250px;
+  position: relative;
+  box-shadow: 0 0 5px 5px rgba(30, 30, 30, 0.1);
+}
+
+
+.details-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 500px;
+  margin-left: 30px;
+}
+
+.details {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+.detail {
+  padding: 7px 0px;
+}
+
+.title {
+  font-size: 32px
+}
+
+.booking-submit {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 3px 3px rgba(30, 30, 30, 0.1);
+
+}
+
+.booking-submit:hover {
+
+}
