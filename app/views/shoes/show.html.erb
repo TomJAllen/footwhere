@@ -1,33 +1,27 @@
-<%# <%= render 'navbar' %> %>
+<%= render 'navbar' %>
 
-<div class='landing-cards-container'>
+<div class='container'>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5efca684531e1500073c686a%2FRunning-Shoes-On-Running%2F960x0.jpg%3Ffit%3Dscale);">
   </div>
 </div>
 
-<div class='landing-cards-container'>
-  <div class='landing-card'>
-    <h2 class='card-title'>Overview</h2>
-    <p class='card-content'>Shoe Description</p>
-  </div>
-  <div class='landing-card'>
-    <h2 class='card-title'>Specifications</h2>
-    <p class='card-content'>
-      <ul>
-        <li>Brand: <%= @shoe.brand %></li>
-        <li>Title: <%= @shoe.title %></li>
-        <li>Type: <%= @shoe.category %></li>
-        <li>Size: <%= @shoe.size %></li>
-      </ul>
-    </p>
-  </div>
+<div class='container'>
+  <h2 class='card-title'>Specifications</h2>
+  <p class='card-content'>
+    <ul>
+      <li>Brand: <%= @shoe.brand %></li>
+      <li>Title: <%= @shoe.title %></li>
+      <li>Category: <%= @shoe.category %></li>
+      <li>Size: <%= @shoe.size %></li>
+    </ul>
+  </p>
 </div>
 
-<div class='landing-cards-container'>
+<div class='container'>
   <a class="btn btn-flat" href="#">Book Now</a>
 </div>
 
 
 
-<%# <%= render 'card_div' %> %>
-<%# <%= render 'footer' %> %>
+<%= render 'card_div' %>
+<%= render 'footer' %>
