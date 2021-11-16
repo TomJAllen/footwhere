@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="sticky">
   <div class="navbar-left-icon">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -34,7 +34,7 @@
       </li>
       <% end %>
       <li class="nav-item">
-        <%= link_to "All Shoes", "#", class: "nav-link" %>
+        <%= link_to "All Shoes", shoes_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
