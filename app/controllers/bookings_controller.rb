@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @shoe = Shoe.find(params[:shoe_id])
   end
 
   def create
