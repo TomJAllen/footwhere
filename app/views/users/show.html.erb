@@ -1,8 +1,20 @@
 <h1>This is the users page</h1>
 
 Go to the index page
-see all my bookings
-see all my listings?
+
+<div class="container">
+  <h3>My bookings:</h3>
+  <div class="cards">
+      <% @user_shoes.each do |booking| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
+          <%= link_to shoe.name, shoe_path(shoe.id)%>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+
+My listings
 
 
 
