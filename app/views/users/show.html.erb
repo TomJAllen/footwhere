@@ -5,9 +5,9 @@ Go to the index page
 <div class="container">
   <h3>My bookings:</h3>
   <div class="cards">
-      <% @user_shoes.each do |booking| %>
+      <% @bookings.each do |booking| %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
-          <%= link_to shoe.name, shoe_path(shoe.id)%>
+          <%= booking.shoe_id %>
         </div>
       <% end %>
   </div>
