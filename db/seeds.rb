@@ -75,7 +75,7 @@ puts "saving"
 shoe2.save!
 puts "saved"
 
-shoe2 = Shoe.new(
+shoe3 = Shoe.new(
   title: "Welliessss!!!",
   brand: "Wellington",
   size: "9",
@@ -85,5 +85,30 @@ shoe2 = Shoe.new(
   user_id: user.id
 )
 puts "saving"
-shoe2.save!
+shoe3.save!
 puts "saved"
+
+
+booking1 = Booking.new(
+  user_id: 2,
+  shoe_id: 1
+)
+
+booking1.save!
+puts "saved #{booking1.id}"
+
+booking2 = Booking.new(
+  user_id: 2,
+  shoe_id: 2
+)
+
+booking2.save!
+puts "saved #{booking2.id}"
+
+booking3 = Booking.new(
+  user_id: 2,
+  shoe_id: 3
+)
+
+booking3.save!
+puts "saved #{booking1.id}"
