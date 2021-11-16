@@ -5,3 +5,61 @@
 @import "footer";
 @import "cards";
 @import "banner";
+@import "search";
+
+
+.shoes {
+  // overflow: hidden;
+  // height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 230px;
+  margin-right: 230px;
+  border-radius: 10px;
+  // width: 100px;
+
+}
+
+.shoes img {
+  height: 100%;
+  width: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+}
+
+.shoes h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.shoes p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+
+.shoes .shoe {
+  display: flex;
+}
+
+.shoes .shoe .shoe-card-text {
+  padding-left: 15px;
+}
+
+.shoes .shoe .shoe-card-text .card-text-p {
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
