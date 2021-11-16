@@ -1,0 +1,5 @@
+<%= simple_form_for [@shoe, @booking], url: shoe_bookings_path do |f|%>
+  <%= f.input :date, as: :date, label: "Rental start date" %>
+  <%= f.input :duration, label: "Rental duration (days)"%>
+  <%= f.button :submit%>
+<% end %>
