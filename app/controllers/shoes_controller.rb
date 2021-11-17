@@ -21,6 +21,8 @@ class ShoesController < ApplicationController
 
   def create
     @shoe = Shoe.new(shoe_params)
+    @user = current_user
+    @shoe.user = @user
 
     if @shoe.save
       redirect_to @shoe, notice: 'Shoe was successfully created.'
@@ -44,6 +46,6 @@ class ShoesController < ApplicationController
   end
 
   def shoe_params
-    params.require(:shoe).permit(:title, :brand, :type, :size)
+    params.require(:shoe).permit(:title, :brand, :size, :category, :price, :image_url)
   end
 end
