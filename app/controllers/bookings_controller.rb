@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.create(duration: booking_duration, date: booking_date, user_id: 1)
+    @booking = Booking.create(duration: booking_duration, date: booking_date, user_id: current_user.id)
     # user_id needs to be changed once user functionality is implemented
     @booking.shoe = Shoe.find(params[:shoe_id])
     if @booking.save
