@@ -19,7 +19,9 @@
     <%= simple_form_for [@shoe, @booking], url: shoe_bookings_path, html: { class: "booking-form"} do |f|%>
       <%= f.input :date, as: :date, label: "Rental start date", :input_html => { class: 'field' } %>
       <%= f.input :duration, label: "Rental duration (days)", :input_html => { class: 'field' } %>
-      <%= f.button :submit, 'Book now!',  class: "submit-button booking-submit"  %>
+      <%= link_to profile_path do %>
+        <%= f.button :submit, 'Book now!',  class: "submit-button booking-submit"  %>
+      <% end %>
     <% end %>
   </div>
 
