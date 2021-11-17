@@ -20,6 +20,7 @@
   margin-left: 20vw;
   margin-right: 20vw;
   border-radius: 10px;
+  transition: 0.5s;
   // width: 100px;
 
 }
@@ -63,4 +64,18 @@
 h1 {
   text-align: center;
   margin-top: 20px;
+}
+
+a {
+  color: black; /* blue colors for links too */
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.shoes:hover {
+  margin-left: 310px;
+  margin-right: 310px;
 }
