@@ -112,3 +112,47 @@ booking3 = Booking.new(
 
 booking3.save!
 puts "saved #{booking1.id}"
+
+# new shoes
+
+shoe = Shoe.new(
+  title: "Dwayne (the croc) Johnsons",
+  brand: "Crocs",
+  size: "72",
+  category: "sneakers",
+  price: "£99",
+  image_url: "https://i.redd.it/9vyht6jsrbv01.jpg",
+  user_id: user.id
+)
+puts "saving"
+shoe.save!
+puts "saved"
+
+shoe = Shoe.new(
+  title: "Fresh Fish slippers",
+  brand: "Flippy",
+  size: "8",
+  category: "sneakers",
+  price: "£3",
+  image_url: "https://m.media-amazon.com/images/I/717-Mksh02L._AC_UY500_.jpg",
+  user_id: user.id
+)
+puts "saving"
+shoe.save!
+puts "saved"
+
+booking4 = Booking.new(
+  user_id: 2,
+  shoe_id: 4
+)
+
+booking4.save!
+puts "saved #{booking1.id}"
+
+booking5 = Booking.new(
+  user_id: 2,
+  shoe_id: 5
+)
+
+booking5.save!
+puts "saved #{booking1.id}"
