@@ -47,14 +47,21 @@
   margin-bottom: 10vh;
 }
 
+#card-outershadow {
+  box-shadow: 0 0 5px rgb(153, 153, 153);
+  border-radius: 10px;
+}
+
+
 .card {
+  box-shadow: 0 0 7px rgb(128, 211, 250) inset;
   width: 300px;
   border-radius: 10px;
-  // box-shadow: 0 0 5px rgb(230 230 230);
   text-align: center;
   padding: 20px;
   border: 1px
   solid rgb(128, 211, 250);
+  // box-shadow: 5px 10px 20px red inset;
 }
 
 .card img {
@@ -66,12 +73,13 @@
 }
 
 .card i {
-  font-size: 111px;
+  font-size: 118px;
   padding-bottom: 32px;
 }
 
 .arrow {
   font-size: 75px;
   margin-top: 95px;
-  color: #142d75 ;
+  color: #31a2cf ;
+  text-shadow: 0 0 5px #696969, 0 0 5px #ffffff;
 }
