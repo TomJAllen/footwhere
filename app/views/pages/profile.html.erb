@@ -4,27 +4,57 @@
 
 <p>Here you can see all of your current rentals and bookings, edit their details and see your previous rentals and bookings.
 
+<div>
+<a class="btn btn-flat" <%= link_to "Upload your shoe to rent!", new_shoe_path %>
+></a>
+</div>
+
+
 <h3> My Bookings </h3>
-  <% Booking.where(["email = #{current_user.email}"]) do |booking| %>
-    <div class="shoes">
-      <div class="shoe">
-        <div class="shoe-img">
-          <%= image_tag(booking.image_url) %>
-        </div>
-        <div class="shoe-card-text">
-          <h2><%= shoe.title %></h2>
-          <div class="card-text-p">
-            <p>Brand: <strong><%= shoe.brand %></strong></p>
-            <p>Size (UK): <strong><%= shoe.size %></strong></p>
-            <p>Type: <strong><%= shoe.category %></strong></p>
-            <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
+  <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
+  <% @user_bookings.each do  |booking| %>
+    <% @shoe = Shoe.find_by id: booking.shoe_id %>
+      <div class="shoes">
+          <div class="shoe">
+            <div class="shoe-img">
+              <%= image_tag(@shoe.image_url) %>
+            </div>
+            <div class="shoe-card-text">
+              <h2><%= @shoe.title %></h2>
+              <div class="card-text-p">
+                <p>Title: <strong><%= @shoe.title %></strong></p>
+                <p>Duration <strong><%= booking.duration %></strong></p>
+                <p>Brand: <strong><%= @shoe.brand %></strong></p>
+                <p>Size (UK): <strong><%= @shoe.size %></strong></p>
+                <p>Type: <strong><%= @shoe.category %></strong></p>
+                <p>Price: <strong><%= @shoe.price %>.00 </strong>/day</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  <% end %>
-<%= render 'card_div'%>
+    <% end %>
 
 
 <h3> My Rentals </h3>
-<%= render 'card_div'%>
+ <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
+  <% @user_bookings.each do  |booking| %>
+    <% @shoe = Shoe.find_by id: booking.shoe_id %>
+      <div class="shoes">
+          <div class="shoe">
+            <div class="shoe-img">
+              <%= image_tag(@shoe.image_url) %>
+            </div>
+            <div class="shoe-card-text">
+              <h2><%= @shoe.title %></h2>
+              <div class="card-text-p">
+                <p>Title: <strong><%= @shoe.title %></strong></p>
+                <p>Duration <strong><%= booking.duration %></strong></p>
+                <p>Brand: <strong><%= @shoe.brand %></strong></p>
+                <p>Size (UK): <strong><%= @shoe.size %></strong></p>
+                <p>Type: <strong><%= @shoe.category %></strong></p>
+                <p>Price: <strong><%= @shoe.price %>.00 </strong>/day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
