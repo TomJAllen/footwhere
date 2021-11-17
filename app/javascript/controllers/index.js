@@ -9,8 +9,8 @@ const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
 
 
-mybutton = document.getElementById("findOutBtn");
-function infoFunction() {
-  document.body.scrollTop = 100; // For Safari
-  document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
-}
+// mybutton = document.getElementById("findOutBtn");
+// function infoFunction() {
+//   document.body.scrollTop = 100; // For Safari
+//   document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
+// }
