@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   resources :shoes, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end
-
-  # resources :users, only: [:show]
+  get '/profile', to: 'pages#profile', as: 'profile'
 end
