@@ -2,7 +2,6 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @shoe.image_url %>);">
   </div>
 </div>
-
 <div class='container'>
   <h2 class='card-title'><%= @shoe.title %></h2>
   <p class='card-content'>
@@ -14,7 +13,6 @@
     </ul>
   </p>
 </div>
-
 <div class='container'>
   <%= link_to "Book now!", new_shoe_booking_path(@shoe) %>
 </div>
