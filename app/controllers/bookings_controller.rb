@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     # user_id needs to be changed once user functionality is implemented
     @booking.shoe = Shoe.find(params[:shoe_id])
     if @booking.save
-      redirect_to shoes_path
+      redirect_to profile_path
     # This path should be changed once user functionality is implemented
     else
       render :new

@@ -148,11 +148,3 @@ booking4 = Booking.new(
 
 booking4.save!
 puts "saved #{booking1.id}"
-
-booking5 = Booking.new(
-  user_id: 2,
-  shoe_id: 5
-)
-
-booking5.save!
-puts "saved #{booking1.id}"
