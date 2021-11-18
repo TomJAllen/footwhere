@@ -18,6 +18,7 @@ class ShoesController < ApplicationController
 
   def destroy
     @shoe.destroy
+    redirect_to shoes_url, notice: 'Shoe was successfully deleted.'
   end
 
   def show
