@@ -1,16 +1,22 @@
 
 <h1>Shoes you can rent RIGHT NOW!!!</h1>
 <div class="search-container">
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-      </button>
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+    <%= form_tag shoes_path, method: :get, class: 'form-inline' do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control flex-grow-1",
+        placeholder: "Find your perfect FootWhere"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>
 
+<div class="container">
   <% @shoes.each do |shoe| %>
     <%= link_to shoe_path(shoe) do %>
       <div class="shoes">
@@ -31,3 +37,4 @@
       </div>
     <% end %>
   <% end %>
+</div>

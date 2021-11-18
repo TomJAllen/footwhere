@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise'
 
+#Search function
+gem 'pg_search', '~> 2.3.0'
+
 #Something to do with cloudinary
 gem 'cloudinary', '~> 1.16.0'
 

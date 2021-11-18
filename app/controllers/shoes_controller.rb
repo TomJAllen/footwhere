@@ -2,7 +2,11 @@ class ShoesController < ApplicationController
   before_action :set_shoe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @shoes = Shoe.all
+    if params[:query].present?
+      @shoes = Shoe.search_by_title_brand_category_and_size(params[:query])
+    else
+      @shoes = Shoe.all
+    end
   end
 
   def new
