@@ -18,12 +18,14 @@
               <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
           </div>
           <div class="shoe-card-text">
-            <h2><%= shoe.title %></h2>
+            <h2 class="title" ><%= shoe.title %></h2>
             <div class="card-text-p">
-              <p>Brand: <strong><%= shoe.brand %></strong></p>
-              <p>Size (UK): <strong><%= shoe.size %></strong></p>
-              <p>Type: <strong><%= shoe.category %></strong></p>
-              <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
+              <ul class="details">
+                <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
+                <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
+                <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
+                <li class="detail" >Price: <strong><%= shoe.price %>.00 </strong>/day</li>
+              </ul>
             </div>
           </div>
         </div>
