@@ -159,3 +159,23 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
+.card-icon {
+  position: relative;
+}
+
+#delete-icon {
+    color: #101935;
+    position: absolute;
+    top: 208px;
+    right: 8px;
+    z-index: 1;
+}
+
+#edit-icon {
+    color: #101935;
+    position: absolute;
+    top: 208px;
+    right: 32px;
+    z-index: 1;
+}

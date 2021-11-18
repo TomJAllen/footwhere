@@ -1,5 +1,5 @@
 <div class="booking-form-div">
-    <%= simple_form_for @shoe, url: shoes_path, html: { class: "booking-form"} do |f|%>
+    <%= simple_form_for @shoe, html: { class: "booking-form"} do |f|%>
       <%= f.input :title, label: "Title", :input_html => { class: 'field' } %>
       <%= f.input :brand, label: "Brand", :input_html => { class: 'field' } %>
       <%= f.input :size, label: "Size", :input_html => { class: 'field' } %>
@@ -12,7 +12,7 @@
   </div>
 
 <%# Put below statement on the show page ?  %>
-<%# <%= link_to 'Edit', edit_shoe_path(@shoe) %> | %>
+<%# <%= link_to 'Edit', edit_shoe_path(@shoe) %>
 
 <%# Code for deleting a shoe ?  %>
-<%# <%= link_to "Delete Shoe", shoe_path(shoe), method: :delete, data: { confirm: "Are you sure?" } %> %>
+<%# <%= link_to "Delete Shoe", shoe_path(shoe), method: :delete, data: { confirm: "Are you sure?" } %>
