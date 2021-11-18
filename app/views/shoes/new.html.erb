@@ -3,7 +3,7 @@
       <%= f.input :title, label: "Title", :input_html => { class: 'field' } %>
       <%= f.input :brand, label: "Brand", :input_html => { class: 'field' } %>
       <%= f.input :size, label: "Size", :input_html => { class: 'field' } %>
-      <%= f.input :image_url, label: "Image", :input_html => { class: 'field' } %>
+      <%= f.input :photo, as: :file %>
       <%= f.input :category, collection: ["hiking", "formal", "flippers", "sneakers", "wellies", "industrial", "climbing", "cycling", "sport"], label: "Category", :input_html => { class: 'field' } %>
       <%= f.input :price, label: "Price", :input_html => { class: 'field' } %>
       <%= f.button :submit, 'Book now!',  class: "submit-button booking-submit"  %>

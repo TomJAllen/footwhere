@@ -16,7 +16,7 @@
       <div class="shoes">
         <div class="shoe">
           <div class="shoe-img">
-            <%= image_tag(shoe.image_url) %>
+              <%= cl_image_tag shoe.photo.key%>
           </div>
           <div class="shoe-card-text">
             <h2><%= shoe.title %></h2>
