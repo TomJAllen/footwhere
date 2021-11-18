@@ -32,6 +32,26 @@
   box-shadow: 0 0 5px 5px rgba(30, 30, 30, 0.1);
 }
 
+.shoe-spec {
+  // justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin: 0px;
+  padding-top: 20px;
+  width: 800px;
+  height: 200px;
+  position: relative;
+  box-shadow: 0 0 5px 5px rgba(30, 30, 30, 0.1);
+}
+
+.spec-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .details-container {
   display: flex;

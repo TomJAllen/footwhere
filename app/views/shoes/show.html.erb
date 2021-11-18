@@ -2,17 +2,29 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_tag shoe.photo.key%>);">
   </div>
 </div>
-<div class='container'>
-  <h2 class='card-title'><%= @shoe.title %></h2>
-  <p class='card-content'>
-    <ul>
-      <li>Brand: <%= @shoe.brand %></li>
-      <li>Category: <%= @shoe.category %></li>
-      <li>Size: <%= @shoe.size %></li>
-      <li>Price: £<%= @shoe.price %>.00 /day</li>
-    </ul>
-  </p>
+
+<br>
+
+<div class="spec-container">
+  <div class='shoe-spec'>
+    <h2><%= @shoe.title %></h2>
+    <p>
+      <ul>
+        <li>Brand: <%= @shoe.brand %></li>
+        <li>Category: <%= @shoe.category %></li>
+        <li>Size: <%= @shoe.size %></li>
+        <li>Price: £<%= @shoe.price %>.00 /day</li>
+      </ul>
+    </p>
+  </div>
 </div>
-<div class='container'>
-  <%= link_to "Book now!", new_shoe_booking_path(@shoe) %>
+
+
+<div class='spec-container'>
+  <div class="btn btn-flat">
+    <%= link_to "BOOK NOW", new_shoe_booking_path(@shoe.id) %>
+  </div>
+
 </div>
+
+<br>
