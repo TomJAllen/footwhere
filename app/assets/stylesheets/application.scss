@@ -18,9 +18,15 @@
 }
 
 body {
+  // height: auto;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 130px;
+  max-width: 100vw;
+  // padding: 130px;
+}
+
+.content {
+  min-height: calc(100vh - 222px);
 }
 
 html {

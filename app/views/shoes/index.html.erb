@@ -1,33 +1,38 @@
-
-<h1>Shoes you can rent RIGHT NOW!!!</h1>
-<div class="search-container">
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  <% end %>
-</div>
-
-  <% @shoes.each do |shoe| %>
-    <%= link_to shoe_path(shoe) do %>
-      <div class="shoes">
-        <div class="shoe">
-          <div class="shoe-img">
-              <%= cl_image_tag shoe.photo.key%>
-          </div>
-          <div class="shoe-card-text">
-            <h2><%= shoe.title %></h2>
-            <div class="card-text-p">
-              <p>Brand: <strong><%= shoe.brand %></strong></p>
-              <p>Size (UK): <strong><%= shoe.size %></strong></p>
-              <p>Type: <strong><%= shoe.category %></strong></p>
-              <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
-            </div>
-          </div>
-        </div>
+<div id="search-position-override">
+  <div class="search-container" id="index-search-container">
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group" id="index-search">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
       </div>
     <% end %>
-  <% end %>
+  </div>
+</div>
+
+<div class="map-shoes-container">
+  <div class="shoes-div">
+    <% @shoes.each do |shoe| %>
+      <%= link_to shoe_path(shoe) do %>
+        <div class="shoe-info-index">
+            <div class="image">
+              <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
+            </div>
+          <div class="details-container">
+            <ul class="details">
+              <li><h4 class="title"><%= shoe.title%></h4></li>
+              <li class="detail">Brand: <%= shoe.brand %></li>
+              <li class="detail">Category: <%= shoe.category %></li>
+              <li class="detail">Size (UK): <%= shoe.size %></li>
+            </ul>
+            <span class="price"><%= shoe.price %>.00 /day</span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class = "map-div">
+  <%# map here plez %>
+  </div>
+</div>

@@ -1,17 +1,20 @@
 .search-form-control {
   display: inline-block;
   position: relative;
-  // max-width: 80%;
+  height: 60px;
+  box-sizing: content-box;
+  height: 100px
 }
 
 form.search {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .search-form-control .btn {
   position: absolute;
-  top: 27px;
+  top: 29px;
   // bottom: 8px;
   right: 9px;
 }
@@ -23,8 +26,7 @@ form.search {
     border-radius: 10px;
     margin: 0 auto;
     width: 100vh;
-    margin-bottom: 60px;
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 // @media (max-width: 300px) {
