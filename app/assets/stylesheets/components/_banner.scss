@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 337px 0;
+  padding: 376px 0;
 }
 
 .banner h1 {
@@ -15,7 +15,7 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .8;
+  // opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -30,6 +30,8 @@
 .btn-flat:hover {
   background: #85b7c5;
   color: white;
+  padding-left: 4vh;
+  padding-right: 4vh;
 }
 
 .banner-text {
