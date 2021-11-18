@@ -7,12 +7,27 @@
 //   top: 72px;
 // }
 
-#search-position-override {
+.search-container {
+  position: sticky;
+  top: 72px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 72px;
   z-index: 1;
   background-color: #f4f4f4;
   height: 100px;
+  width: 100vw;
+  margin: 0 auto;
+  box-shadow: 2px 5px 5px 2px rgba(30, 30, 30, 0.1);
+}
+
+.form-inline {
+  width: 500px;
+  display: flex;
+  justify-content: center;
 }
 
 .map-shoes-container {
@@ -114,4 +129,3 @@
   box-shadow: 0 0 3px 3px rgba(30, 30, 30, 0.1);
 
 }
-

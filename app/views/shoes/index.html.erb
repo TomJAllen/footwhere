@@ -1,7 +1,4 @@
-<h1>Shoes you can rent RIGHT NOW!!!</h1>
 <div class="search-container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
     <%= form_tag shoes_path, method: :get, class: 'form-inline' do %>
       <%= text_field_tag :query,
         params[:query],
@@ -10,9 +7,6 @@
       %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="map-shoes-container">
@@ -31,14 +25,6 @@
               <p>Type: <strong><%= shoe.category %></strong></p>
               <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
             </div>
-          <div class="details-container">
-            <ul class="details">
-              <li><h4 class="title"><%= shoe.title%></h4></li>
-              <li class="detail">Brand: <%= shoe.brand %></li>
-              <li class="detail">Category: <%= shoe.category %></li>
-              <li class="detail">Size (UK): <%= shoe.size %></li>
-            </ul>
-            <span class="price"><%= shoe.price %>.00 /day</span>
           </div>
         </div>
       <% end %>
@@ -47,4 +33,3 @@
   <div class = "map-div">
   <%# map here plez %>
   </div>
-
