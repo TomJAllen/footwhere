@@ -18,7 +18,7 @@ class ShoesController < ApplicationController
 
   def destroy
     @shoe.destroy
-    redirect_to shoes_url, notice: 'Shoe was successfully deleted.'
+    redirect_to profile_url, notice: 'Shoe was successfully deleted.'
   end
 
   def show
@@ -37,8 +37,9 @@ class ShoesController < ApplicationController
   end
 
   def update
+    @shoe.update(shoe_params)
     if @shoe.update(shoe_params)
-      redirect_to @shoe, notice: 'Shoe was successfully updated.'
+      redirect_to shoe_path(@shoe), notice: 'Shoe was successfully updated.'
     else
       render :edit
     end
