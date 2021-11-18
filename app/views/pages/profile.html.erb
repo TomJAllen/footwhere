@@ -1,60 +1,62 @@
-<h1><%="Hi #{current_user.email}, this is your profile page!"%></h1>
-
-
-
-<p>Here you can see all of your current rentals and bookings, edit their details and see your previous rentals and bookings.
-
-<div>
-<a class="btn btn-flat" <%= link_to "Upload your shoe to rent!", new_shoe_path %>
-></a>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h1><%="Hi #{current_user.email}, this is your profile page!"%></h1>
+      <p class="row justify-content-center">Here you can see all of your current rentals and bookings, edit their details and see your previous rentals and bookings.
+    </div>
+  </div>
 </div>
 
 
-<h3> My Bookings </h3>
-  <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
-  <% @user_bookings.each do  |booking| %>
-    <% @shoe = Shoe.find_by id: booking.shoe_id %>
-      <div class="shoes">
-          <div class="shoe">
-            <div class="shoe-img">
-              <%= image_tag(@shoe.image_url) %>
-            </div>
-            <div class="shoe-card-text">
+<div class="container">
+  <h3> My Rentals </h3>
+  <div class="cards" style="padding: 0px;">
+    <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
+    <% @user_bookings.each do  |booking| %>
+      <% @shoe = Shoe.find_by id: booking.shoe_id %>
+      <%= link_to shoe_path(@shoe) do %>
+        <div class="card-shoe-profile">
+          <%= cl_image_tag @shoe.photo.key %>
+          <div class="card-shoe-profile-infos">
+            <div>
               <h2><%= @shoe.title %></h2>
-              <div class="card-text-p">
-                <p>Title: <strong><%= @shoe.title %></strong></p>
-                <p>Duration <strong><%= booking.duration %></strong></p>
-                <p>Brand: <strong><%= @shoe.brand %></strong></p>
-                <p>Size (UK): <strong><%= @shoe.size %></strong></p>
-                <p>Type: <strong><%= @shoe.category %></strong></p>
-                <p>Price: <strong><%= @shoe.price %>.00 </strong>/day</p>
-              </div>
+              <p>Title: <strong><%= @shoe.title %></strong></p>
+              <p>When: <strong><%= booking.date %>.00 </strong>/day</p>
+              <p>For: <strong><%= booking.duration %> days</strong></p>
             </div>
           </div>
         </div>
+      <% end %>
+    <% end %>
+</div>
+
+
+<div class="container" style="padding-left: 0px;" >
+  <h3> My Shoes </h3>
+  <div class="cards" style="padding: 0px;">
+    <%= link_to new_shoe_path do %>
+      <div class="card-shoe-add">
+        <img src="https://images.unsplash.com/photo-1623057000049-e220f79c7051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1904&q=80" />
+      </div>
     <% end %>
 
-
-<h3> My Rentals </h3>
- <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
-  <% @user_bookings.each do  |booking| %>
-    <% @shoe = Shoe.find_by id: booking.shoe_id %>
-      <div class="shoes">
-          <div class="shoe">
-            <div class="shoe-img">
-              <%= image_tag(@shoe.image_url) %>
-            </div>
-            <div class="shoe-card-text">
-              <h2><%= @shoe.title %></h2>
-              <div class="card-text-p">
-                <p>Title: <strong><%= @shoe.title %></strong></p>
-                <p>Duration <strong><%= booking.duration %></strong></p>
-                <p>Brand: <strong><%= @shoe.brand %></strong></p>
-                <p>Size (UK): <strong><%= @shoe.size %></strong></p>
-                <p>Type: <strong><%= @shoe.category %></strong></p>
-                <p>Price: <strong><%= @shoe.price %>.00 </strong>/day</p>
+    <% @user_shoes = Shoe.where( { user_id: current_user.id} ).to_a %>
+      <% @user_shoes.each do |shoe| %>
+        <%= link_to shoe_path(shoe) do %>
+          <div class="card-shoe-profile">
+            <%= cl_image_tag shoe.photo.key %>
+            <div class="card-shoe-profile-infos">
+              <div>
+                <h2><%= @shoe.title %></h2>
+                <p>Title: <strong><%= shoe.title %></strong></p>
+                <p>Brand: <strong><%= shoe.brand %></strong></p>
+                <p>Size (UK): <strong><%= shoe.size %></strong></p>
+                <p>Type: <strong><%= shoe.category %></strong></p>
+                <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
               </div>
             </div>
           </div>
-        </div>
-    <% end %>
+        <% end %>
+      <% end %>
+    </div>
+</div>
