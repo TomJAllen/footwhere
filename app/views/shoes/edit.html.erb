@@ -6,7 +6,8 @@
       <%= f.input :photo, as: :file %>
       <%= f.input :category, collection: ["hiking", "formal", "flippers", "sneakers", "wellies", "industrial", "climbing", "cycling", "sport"], label: "Category", :input_html => { class: 'field' } %>
       <%= f.input :price, label: "Price", :input_html => { class: 'field' } %>
-      <%= f.button :submit, 'Save Changes',  class: "submit-button booking-submit", method: :patch %>
+      <%= f.input :address, label: "Shoe location (Street Address, Town/City)", :input_html => { class: 'field' } %>
+      <%= f.button :submit, 'Save Changes',  class: "submit-button booking-submit"  %>
     <% end %>
   </div>
 

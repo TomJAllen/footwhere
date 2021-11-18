@@ -1,3 +1,151 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+// #index-search {
+//   margin-bottom: 0px;
+//   top: 72px;
+// }
+
+.search-container {
+  position: sticky;
+  top: 72px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 72px;
+  z-index: 1;
+  background-color: #f4f4f4;
+  height: 100px;
+  width: 100vw;
+  margin: 0 auto;
+  box-shadow: 2px 5px 5px 2px rgba(30, 30, 30, 0.1);
+}
+
+.form-inline {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.map-shoes-container {
+  // position: absolute;
+  // top: 172px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.shoes-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  justify-content: flex-start;
+  min-height: calc(100vh - 172px);
+  background-color: rgb(211, 211, 211);
+  padding: 20px;
+}
+
+.map-div {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  height: calc(100vh - 172px);
+  position: sticky;
+  top: 172px;
+
+}
+
+.shoe-info-index {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(50vw - 50px);
+  height: 200px;
+  position: relative;
+  box-shadow: 2px 2px 5px 5px rgba(30, 30, 30, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition-duration: 0.5s;
+}
+
+.shoe-info-index:hover {
+  height: 240px;
+  transition-duration: 0.5s;
+  background-color: ivory;
+}
+
+  .shoe-info-index:hover .image {
+  height: 240px;
+  transition-duration: 0.5s;
+}
+
+.image {
+  border-radius: 10px 0 0 10px;
+  height: 200px;
+  width: auto;
+  transition-duration: 0.5s;
+}
+
+
+.shoe-spec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin: 0px;
+  padding-top: 20px;
+  width: 800px;
+  height: 200px;
+  position: relative;
+  box-shadow: 0 0 5px 5px rgba(30, 30, 30, 0.1);
+}
+
+.spec-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 500px;
+  margin-left: 30px;
+}
+
+.title {
+  font-size: 32px;
+  padding-left: 30px;
+}
+
+.details {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+.detail {
+  padding: 0px 0px;
+}
+
+
+.booking-submit {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 3px 3px rgba(30, 30, 30, 0.1);
+
+}

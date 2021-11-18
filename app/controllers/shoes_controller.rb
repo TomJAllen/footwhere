@@ -4,8 +4,20 @@ class ShoesController < ApplicationController
   def index
     if params[:query].present?
       @shoes = Shoe.search_by_title_brand_category_and_size(params[:query])
+      @markers = @shoes.geocoded.map do |shoe|
+        {
+          lat: shoe.latitude,
+          lng: shoe.longitude
+        }
+      end
     else
       @shoes = Shoe.all
+      @markers = @shoes.geocoded.map do |shoe|
+        {
+          lat: shoe.latitude,
+          lng: shoe.longitude
+        }
+      end
     end
   end
 
