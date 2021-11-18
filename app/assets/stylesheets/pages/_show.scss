@@ -1,0 +1,39 @@
+.container-show {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.information {
+  padding-left: 30px;
+}
+
+.back {
+  margin: 20px;
+}
+
+
+
+.book-now {
+  width: 360px;
+  padding: 8px 24px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background: #AED9E5;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.book-now a {
+  font-weight: 600;
+}
+.book-now:hover {
+  background: #85b7c5;
+  color: white;
+  padding-left: 4vh;
+  padding-right: 4vh;
+}
+
+.information-content {
+  padding-top: 40px;
+}
