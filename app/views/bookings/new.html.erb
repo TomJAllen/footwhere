@@ -2,7 +2,7 @@
 
   <div class="shoe-info">
       <div class="image">
-        <%= image_tag(@shoe.image_url, size: "250x250")%>
+        <%= cl_image_tag shoe.photo.key, height: 250, width: 250%>
       </div>
     <div class="details-container">
       <ul class="details">

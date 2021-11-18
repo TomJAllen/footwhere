@@ -15,8 +15,8 @@
     <%= link_to shoe_path(shoe) do %>
       <div class="shoes">
         <div class="shoe">
-          <div class="shoe-img">
-            <%= image_tag(shoe.image_url) %>
+          <div class="shoe-img">>
+              <%= cl_image_tag shoe.photo.key%>
           </div>
           <div class="shoe-card-text">
             <h2><%= shoe.title %></h2>
