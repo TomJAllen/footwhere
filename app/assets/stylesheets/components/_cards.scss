@@ -1,49 +1,9 @@
-// .landing-card {
-//   display: flex;
-//   justify-content: space-evenly;
-//   align-items: center;
-//   flex-direction: column;
-//   width: 300px;
-//   height: 300px;
-//   background-color: rgba(245, 255, 255, 1);
-//   color: black;
-//   box-shadow: 0px 0px 5px 5px rgba(20, 20, 20, 0.1);
-// }
-
-
-// .landing-cards-container {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   height: 600px;
-//   margin: 0 auto;
-//   padding-bottom: 130px;
-// }
-
-// .content-container-h {
-//   display: flex;
-//   align-items: center;
-//   flex-grow: 2;
-//   margin-top: 50px
-// }
-
-// .content-container-p {
-//   display: flex;
-//   align-items: center;
-//   flex-grow: 1;
-// }
-
-// .card-title {
-//   vertical-align: middle;
-
-// }
-
 .cards {
   display: flex;
   justify-content: space-between;
-  margin-left: 20vh;
-  margin-right: 20vh;
-  margin-top: 10vh;
+  margin-left: 0vh;
+  margin-right: 0vh;
+  margin-top: 5vh;
   margin-bottom: 10vh;
 }
 
@@ -52,6 +12,22 @@
   border-radius: 10px;
 }
 
+
+// Cards-grid items (used on the profile page):
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
 .card {
   box-shadow: 0 0 7px rgb(128, 211, 250) inset;
@@ -82,4 +58,104 @@
   margin-top: 95px;
   color: #31a2cf ;
   text-shadow: 0 0 5px #696969, 0 0 5px #ffffff;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Shoe details for profile page
+
+.card-shoe-profile {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.card-shoe-profile > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.card-shoe-profile h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-shoe-profile p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-shoe-profile .card-shoe-profile-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-shoe-profile-infos .card-shoe-profile-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-shoe-add {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.card-shoe-add > img {
+  height: 341px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }

@@ -13,15 +13,22 @@
     <%# <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"> %>
   </head>
 
+  <body>
+    <%= render 'pages/navbar'%>
+    <% if notice %>
 
-    <body>
-          <%= render 'pages/navbar'%>
-          <div class='content'>
-            <%= yield %>
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-          </div>
-          <%= render 'pages/footer'%>
-    </body>
+    <div class="flash alert alert-dismissible fade show" role="alert">
+        <p><%= notice %></p>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+    <% end %>
+    <p class="alert"><%= alert %></p>
+    <div class='content'>
+      <%= yield %>
+    </div>
+    <%= render 'pages/footer'%>
+  </body>
 
 </html>
