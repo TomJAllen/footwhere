@@ -1,4 +1,3 @@
-
 <h1>Shoes you can rent RIGHT NOW!!!</h1>
 <div class="search-container">
   <div class="row justify-content-center">
@@ -16,13 +15,13 @@
   </div>
 </div>
 
-<div class="container">
-  <% @shoes.each do |shoe| %>
-    <%= link_to shoe_path(shoe) do %>
-      <div class="shoes">
-        <div class="shoe">
-          <div class="shoe-img">
-              <%= cl_image_tag shoe.photo.key%>
+<div class="map-shoes-container">
+  <div class="shoes-div">
+    <% @shoes.each do |shoe| %>
+      <%= link_to shoe_path(shoe) do %>
+        <div class="shoe-info-index">
+            <div class="image">
+              <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
           </div>
           <div class="shoe-card-text">
             <h2><%= shoe.title %></h2>
@@ -32,9 +31,20 @@
               <p>Type: <strong><%= shoe.category %></strong></p>
               <p>Price: <strong><%= shoe.price %>.00 </strong>/day</p>
             </div>
+          <div class="details-container">
+            <ul class="details">
+              <li><h4 class="title"><%= shoe.title%></h4></li>
+              <li class="detail">Brand: <%= shoe.brand %></li>
+              <li class="detail">Category: <%= shoe.category %></li>
+              <li class="detail">Size (UK): <%= shoe.size %></li>
+            </ul>
+            <span class="price"><%= shoe.price %>.00 /day</span>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+  <div class = "map-div">
+  <%# map here plez %>
+  </div>
+

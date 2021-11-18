@@ -25,7 +25,10 @@
     </div>
     <% end %>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class='content'>
+      <%= yield %>
+    </div>
     <%= render 'pages/footer'%>
   </body>
+
 </html>
