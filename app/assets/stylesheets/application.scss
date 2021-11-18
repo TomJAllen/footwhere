@@ -13,8 +13,25 @@
 @import "pages/index";
 
 
-.notice {
+.flash {
   margin: 0;
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
+  border: 2px solid #1EDD88;
+}
+
+.flash p {
+  margin-top: 12px;
+}
+
+.flash i {
+  padding-left: 10px;
 }
 
 body {
