@@ -14,24 +14,26 @@
     <% @shoes.each do |shoe| %>
       <%= link_to shoe_path(shoe) do %>
         <div class="shoe-info-index">
-            <div class="image">
-              <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
+          <div class="image">
+            <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
           </div>
           <div class="shoe-card-text">
-            <h2 class="title" ><%= shoe.title %></h2>
-            <div class="card-text-p">
-              <ul class="details">
-                <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
-                <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
-                <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
-                <li class="detail" >Price: <strong><%= shoe.price %>.00 </strong>/day</li>
-              </ul>
-            </div>
+          <h2 class="title" ><%= shoe.title %></h2>
+          </div>
+          <div class="card-text-p">
+            <ul class="details">
+              <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
+              <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
+              <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
+              <li class="detail" >Price: <strong><%= shoe.price %>.00 </strong>/day</li>
+            </ul>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-  <div class = "map-div">
-  <%# map here plez %>
+  <div id = "map" class="map-div" data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+</div>
