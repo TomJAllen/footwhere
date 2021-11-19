@@ -19,18 +19,19 @@
               <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
             </div>
 
-            <div class="shoe-title">
-              <p class="title" ><%= shoe.title %></p>
-            </div>
 
-            <div class="card-text-p">
-              <ul class="details">
-                <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
-                <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
-                <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
-                <li class="detail" >Price: <strong>£<%= shoe.price %>.00 </strong>/day</li>
-              </ul>
-            </div>
+              <div class="shoe-title">
+                <p class="title" ><%= shoe.title %></p>
+              </div>
+
+              <div class="card-text-p">
+                <ul class="details">
+                  <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
+                  <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
+                  <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
+                  <li class="detail" >Price: <strong>£<%= shoe.price %>.00 </strong>/day</li>
+                </ul>
+              </div>
 
 
              <%unless shoe.latitude%>
