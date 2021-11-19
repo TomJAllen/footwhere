@@ -3,6 +3,7 @@ class Shoe < ApplicationRecord
   belongs_to :user
 
   validates :category, presence: true
+  validates :address, presence: true
   has_one_attached :photo
 
   include PgSearch::Model
