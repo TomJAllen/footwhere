@@ -2,3 +2,19 @@
   background-color: rgba(88, 116, 157, 1);
   border-radius: 10px;
 }
+
+
+
+.btn-search {
+  color: white;
+  padding: 7px 24px;
+  border-radius: 4px;
+  background: #9cd4e4;
+  transition: 0.3s ease;
+  margin-left: 10px;
+}
+
+.btn-search:hover {
+  background: #85b7c5;
+  color: white;
+}
