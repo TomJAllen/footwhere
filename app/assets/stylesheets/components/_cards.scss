@@ -169,7 +169,7 @@
     position: absolute;
     top: 208px;
     right: 8px;
-    z-index: 1;
+    z-index: 2;
 }
 
 #edit-icon {
@@ -177,5 +177,14 @@
     position: absolute;
     top: 208px;
     right: 32px;
-    z-index: 1;
+    z-index: 2;
+}
+
+#new-shoe-card {
+    display: flex;
+    height: 347px;
+    font-size: 118px;
+    align-items: center;
+    justify-content: center;
+    color: #30a2cf;
 }
