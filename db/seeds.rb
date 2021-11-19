@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # (%w[hiking formal flippers sneakers wellies industrial climbing cycling sport].sample)
-
+require "open-uri"
 
 user = User.new(
   username: "coolguy123",
@@ -27,9 +27,10 @@ shoe = Shoe.new(
   size: "8",
   category: "sneakers",
   price: "£8",
-  image_url: "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4e894c2b76dd4c8e9013aafc016047af_9366/Superstar_Shoes_White_FV3284_01_standard.jpg",
   user_id: user.id
 )
+shoe1 = URI.open("https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4e894c2b76dd4c8e9013aafc016047af_9366/Superstar_Shoes_White_FV3284_01_standard.jpg")
+shoe.photo.attach(io: shoe1, filename: "shoe1.png", content_type: 'image/jpeg')
 puts "saving"
 shoe.save!
 puts "saved"
