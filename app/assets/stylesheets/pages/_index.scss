@@ -58,15 +58,17 @@
 
 }
 
+
+
 .shoe-info-index {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: calc(50vw - 50px);
-  height: 200px;
+  height: 150px;
   position: relative;
   box-shadow: 2px 2px 5px 5px rgba(30, 30, 30, 0.1);
-  background-color: white;
+  background-color: rgba(252, 253, 255, 1);
   border-radius: 10px;
   transition-duration: 0.5s;
 }
@@ -77,8 +79,9 @@
 }
 
 .shoe-info-index:hover {
-  height: 240px;
+  height: 200px;
   transition-duration: 0.5s;
+
 }
 
 .marker-warning {
@@ -89,15 +92,18 @@
 }
 
 .shoe-info-index:hover .image {
-  height: 220px;
+  height: 200px;
   transition-duration: 0.5s;
+  max-width: 250px;
 }
 
 .image {
-  height: 200px;
+  height: 150px;
   width: auto;
   transition-duration: 0.5s;
   border-radius: 10px 0 0 10px;
+  max-width: 150px;
+  object-fit: cover;
 }
 
 
@@ -136,13 +142,12 @@
 
 .shoe-title {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 32px;
   width: 280px;
   height: 130px;
   border-right: 1px solid grey;
-  border-left: 1px solid rgba(30, 30, 30, 0.5);
   transition-duration: 0.5s;
 }
 
