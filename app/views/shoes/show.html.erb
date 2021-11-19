@@ -1,73 +1,35 @@
+<div class="container" style="padding-top: 50px;">
 
-
-<div class="btn btn-flat back">
-  <%= link_to "<- back", shoes_path %>
-</div>
-
-
-<div class="container-show">
-  <div class="product-image">
-    <p class=""><%= cl_image_tag @shoe.photo.key, width: 600, crop: :fill%></p>
-  </div>
-
-  <div class="information">
-    <h2><strong><%= @shoe.title %></strong></h2>
-    <div class="information-price">
-      <h3><strong>£<%= @shoe.price %>.00 </strong>/day</h3>
+  <div class="container-show">
+    <div class="product-image">
+      <p class="shoe-show-img"><%= cl_image_tag @shoe.photo.key, width: 600, crop: :fill%></p>
     </div>
-    <div class=" book-now">
-      <%= link_to "BOOK NOW", new_shoe_booking_path(@shoe.id) %>
-    </div>
-    <div class="information-content">
-      <p><strong>Size:</strong> <%= @shoe.size %></p>
-      <p><strong>Brand:</strong> <%= @shoe.brand %></p>
-      <p><strong>Category:</strong> <%= @shoe.category %></p>
-      <h5>✅ Available for pick up!</h5>
+
+    <div class="information">
+      <h2><strong><%= @shoe.title %></strong></h2>
+      <div class="information-price">
+        <h3><strong>£<%= @shoe.price %>.00 </strong>/day</h3>
+      </div>
+      <div class=" book-now">
+        <%= link_to "BOOK NOW", new_shoe_booking_path(@shoe.id) %>
+      </div>
+      <div class="information-content">
+        <p><strong>Size:</strong> <%= @shoe.size %></p>
+        <p><strong>Brand:</strong> <%= @shoe.brand %></p>
+        <p><strong>Category:</strong> <%= @shoe.category %></p>
+        <h5>✅ Available for pick up!</h5>
+      </div>
     </div>
   </div>
-</div>
 
+  <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%# <div class='container'>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+  <div style="padding-left: 60px;">
+    <div class="btn btn-flat" style="background-color:white; border-color: #add8e6;">
+      <%= link_to "back", shoes_path %>
+    </div>
   </div>
+
+  <br>
+
 </div>
-
-<br>
-
-<div class="spec-container">
-  <div class='shoe-spec'>
-    <h2><%= @shoe.title</h2> %>
-    <%# <p>
-      <ul>
-        <li>Brand: <%= @shoe.brand</li> %>
-        <%# <li>Category: <%= @shoe.category</li> %>
-        <%# <li>Size: <%= @shoe.size</li> %>
-        <%# <li>Price: £<%= @shoe.price.00 /day</li> %>
-      <%# </ul> %>
-    <%# </p>
-  </div>
-</div>
-
-
-<div class='spec-container'>
-  <div class="btn btn-flat">
-    <%= link_to "BOOK NOW", new_shoe_booking_path(@shoe.id) %>
-  <%# </div> %>
-
-<%# </div> %>
-
-<%# <br> %>
