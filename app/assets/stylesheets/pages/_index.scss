@@ -61,7 +61,7 @@
 .shoe-info-index {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: calc(50vw - 50px);
   height: 200px;
   position: relative;
@@ -71,23 +71,41 @@
   transition-duration: 0.5s;
 }
 
+.shoe-card-text {
+  display: flex;
+  align-items: center;
+}
+
 .shoe-info-index:hover {
   height: 240px;
   transition-duration: 0.5s;
 }
 
-  .shoe-info-index:hover .image {
-  height: 240px;
+.marker-warning {
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+}
+
+.shoe-info-index:hover .image {
+  height: 220px;
   transition-duration: 0.5s;
 }
 
 .image {
-  border-radius: 10px 0 0 10px;
   height: 200px;
   width: auto;
   transition-duration: 0.5s;
+  border-radius: 10px 0 0 10px;
 }
 
+
+.card-text-p {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
 
 .shoe-spec {
   display: flex;
@@ -114,19 +132,32 @@
   justify-content: left;
   align-items: center;
   width: 500px;
-  margin-left: 30px;
 }
 
-.title {
+.shoe-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 32px;
-  padding-left: 30px;
+  width: 280px;
+  height: 130px;
+  border-right: 1px solid grey;
+  border-left: 1px solid rgba(30, 30, 30, 0.5);
+  transition-duration: 0.5s;
+}
+
+.shoe-info-index:hover .shoe-title {
+  height: 170px;
+  transition-duration: 0.5s;
 }
 
 .details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  padding-left: 30px;
 }
 
 .price {
