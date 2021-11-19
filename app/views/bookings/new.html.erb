@@ -1,20 +1,19 @@
-<div class="form-with-details">
 
-  <div class="shoe-info">
-      <div class="image">
-        <%= cl_image_tag @shoe.photo.key, height: 250, width: 250%>
-      </div>
-    <div class="details-container">
-      <ul class="details">
-        <li><h4 class="title"><%= @shoe.title%></h4></li>
-        <li class="detail">Brand: <%= @shoe.brand %></li>
-        <li class="detail">Category: <%= @shoe.category %></li>
-        <li class="detail">Size (UK): <%= @shoe.size %></li>
-      </ul>
-      <span class="price"><%= @shoe.price %>.00 /day</span>
+
+  <div class="booking-shoe">
+    <div id="image-book">
+      <%= cl_image_tag @shoe.photo.key, height: 250, width: 250, class:"image"%>
     </div>
+    <h2 id="booking-title" ><strong><%= @shoe.title %></strong></h2>
+      <ul class="booking-lists">
+        <li class="bokking-description" >Brand: <strong><%= @shoe.brand %></strong></li>
+        <li class="bokking-description" >Size (UK): <strong><%= @shoe.size %></strong></li>
+        <li class="bokking-description" >Type: <strong><%= @shoe.category %></strong></li>
+        <li class="bokking-description" >Price: <strong><%= @shoe.price %>.00 </strong>/day</li>
+      </ul>
   </div>
 
+<div class="form-with-details">
   <div class="booking-form-div">
     <%= simple_form_for [@shoe, @booking], url: shoe_bookings_path, html: { class: "booking-form"} do |f|%>
       <%= f.input :date, as: :date, label: "Rental start date", :input_html => { class: 'field' } %>
