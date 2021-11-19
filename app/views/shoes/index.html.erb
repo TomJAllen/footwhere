@@ -14,25 +14,29 @@
     <% @shoes.each do |shoe| %>
       <%= link_to shoe_path(shoe) do %>
         <div class="shoe-info-index">
-          <div class="image">
-            <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
-          </div>
-          <div class="shoe-card-text">
-          <h2 class="title" ><%= shoe.title %></h2>
-          </div>
-          <div class="card-text-p">
-            <ul class="details">
-              <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
-              <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
-              <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
-              <li class="detail" >Price: <strong><%= shoe.price %>.00 </strong>/day</li>
-            </ul>
-            <div>
-             <%unless shoe.latitude%>
-              <span>Marker not rendered!</span>
-             <%end%>
+
+            <div class="image">
+              <%= cl_image_tag shoe.photo.key, height: 250, width: 250, class:"image"%>
             </div>
-          </div>
+
+            <div class="shoe-title">
+              <p class="title" ><%= shoe.title %></p>
+            </div>
+
+            <div class="card-text-p">
+              <ul class="details">
+                <li class="detail" >Brand: <strong><%= shoe.brand %></strong></li>
+                <li class="detail" >Size (UK): <strong><%= shoe.size %></strong></li>
+                <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
+                <li class="detail" >Price: <strong>£<%= shoe.price %>.00 </strong>/day</li>
+              </ul>
+            </div>
+
+
+             <%unless shoe.latitude%>
+              <span class="marker-warning">Map location unavailable</span>
+             <%end%>
+
         </div>
       <% end %>
       <br>

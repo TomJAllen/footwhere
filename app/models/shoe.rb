@@ -1,10 +1,11 @@
 class Shoe < ApplicationRecord
   has_many :bookings, dependent: :destroy
   belongs_to :user
-
+  validates :title, length: { maximum: 15 }
   validates :category, presence: true
   validates :address, presence: true
   has_one_attached :photo
+  validates :photo, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_title_brand_category_and_size,
