@@ -44,8 +44,8 @@
   width: 50vw;
   justify-content: flex-start;
   min-height: calc(100vh - 172px);
-  background-color: rgb(211, 211, 211);
-  padding: 20px;
+  background-color: white;
+  padding: 50px 20px;
 }
 
 .map-div {
@@ -68,14 +68,12 @@
   box-shadow: 2px 2px 5px 5px rgba(30, 30, 30, 0.1);
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 30px;
   transition-duration: 0.5s;
 }
 
 .shoe-info-index:hover {
   height: 240px;
   transition-duration: 0.5s;
-  background-color: ivory;
 }
 
   .shoe-info-index:hover .image {

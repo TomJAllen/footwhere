@@ -27,9 +27,15 @@
               <li class="detail" >Type: <strong><%= shoe.category %></strong></li>
               <li class="detail" >Price: <strong><%= shoe.price %>.00 </strong>/day</li>
             </ul>
+            <div>
+             <%unless shoe.latitude%>
+              <span>Marker not rendered!</span>
+             <%end%>
+            </div>
           </div>
         </div>
       <% end %>
+      <br>
     <% end %>
   </div>
   <div id = "map" class="map-div" data-controller="mapbox"
