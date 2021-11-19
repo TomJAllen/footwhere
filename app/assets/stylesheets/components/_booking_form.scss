@@ -78,8 +78,7 @@
 
 #image-book img {
   border-radius: 10px;
-  height: 250px;
-  width: auto;
+  height: 300px;
   transition-duration: 0.5s;
   display: block;
   margin-left: auto;
@@ -99,4 +98,14 @@
 #booking-title {
   font-size: 50px;
   text-align: center;
+}
+
+
+//For sign up form
+
+.signup-form-div {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  flex-direction: column;
 }

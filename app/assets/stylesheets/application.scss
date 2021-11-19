@@ -41,11 +41,12 @@ body {
   position: relative;
   min-height: 100vh;
   max-width: 100vw;
-  // padding: 130px;
+  padding-bottom: 130px;
 }
 
 .content {
   min-height: calc(100vh - 222px);
+  max-width: 100vw;
 }
 
 html {
