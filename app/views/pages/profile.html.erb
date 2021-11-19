@@ -2,32 +2,46 @@
 
   <div class="row justify-content-center">
     <div class="col-sm-12">
+      <br>
       <h1><%="Hi #{current_user.email}, this is your profile page!"%></h1>
-      <p class="row justify-content-center">Here you can see all of your current rentals and bookings, edit their details and see your previous rentals and bookings.
+      <br>
+      <p class="row justify-content-center">Here you can see all of your current rentals and bookings, edit their details and see your previous rentals and bookings.</p>
+      <br>
+      <br>
     </div>
   </div>
 
 
   <h3> My Rentals </h3>
-  <div class="cards" style="padding: 0px;">
-    <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
-    <% @user_bookings.each do  |booking| %>
-      <% @shoe = Shoe.find_by id: booking.shoe_id %>
-      <%= link_to shoe_path(@shoe) do %>
-        <div class="card-shoe-profile">
-          <%= cl_image_tag @shoe.photo.key %>
-          <div class="card-shoe-profile-infos">
-            <div>
-              <h2><%= @shoe.title %></h2>
-              <p>Title: <strong><%= @shoe.title %></strong></p>
-              <p>When: <strong><%= booking.date %>.00 </strong>/day</p>
-              <p>For: <strong><%= booking.duration %> days</strong></p>
+  <%if Booking.where( { user_id: current_user.id} ).to_a == []%>
+    <br>
+    <h5>It looks like you haven't rented any shoes yet!</h5>
+    <br>
+    <p class="btn btn-flat"><%= link_to "Rent shoes now!", shoes_path %> </p>
+    <br>
+    <br>
+    <br>
+  <%else %>
+    <div class="cards" style="padding: 0px;">
+      <% @user_bookings = Booking.where( { user_id: current_user.id} ).to_a %>
+      <% @user_bookings.each do  |booking| %>
+        <% @shoe = Shoe.find_by id: booking.shoe_id %>
+        <%= link_to shoe_path(@shoe) do %>
+          <div class="card-shoe-profile">
+            <%= cl_image_tag @shoe.photo.key %>
+            <div class="card-shoe-profile-infos">
+              <div>
+                <h2><%= @shoe.title %></h2>
+                <p>Title: <strong><%= @shoe.title %></strong></p>
+                <p>When: <strong><%= booking.date %>.00 </strong>/day</p>
+                <p>For: <strong><%= booking.duration %> days</strong></p>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <%end% %>
 
   <h3> My Shoes </h3>
   <div class="cards" style="padding: 0px;">
