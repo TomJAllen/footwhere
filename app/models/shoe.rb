@@ -1,7 +1,7 @@
 class Shoe < ApplicationRecord
   has_many :bookings, dependent: :destroy
   belongs_to :user
-  validates :title, length: { maximum: 15 }
+
   validates :category, presence: true
   validates :address, presence: true
   has_one_attached :photo
