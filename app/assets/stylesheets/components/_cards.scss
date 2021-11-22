@@ -1,3 +1,9 @@
+.home-cards-div {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;

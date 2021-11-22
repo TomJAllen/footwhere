@@ -1,7 +1,12 @@
 .banner {
+  position: relative;
   background-size: cover;
   background-position: center;
   padding: 376px 0;
+  height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner h1 {
@@ -36,4 +41,5 @@
 
 .banner-text {
   text-align: center;
+
 }

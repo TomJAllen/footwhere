@@ -4,12 +4,18 @@
   position: relative;
 }
 
+#first-scroll {
+  position: absolute;
+  bottom: 72px;
+}
+
 .scroll-down {
   height: 65px;
-  width: 37px;
+  width: 38px;
   border: 2px solid black;
   position: absolute;
-  left: 49%;
+  left: calc(50vw - 19px);
+  bottom: 40px;
   margin-top: 267px;
   border-radius: 50px;
   cursor: pointer;
@@ -32,7 +38,7 @@
 }
 
 .scroll-down::after{
-  top: 30%;
+  top: calc(100vh-72px);
   animation-delay: .3s;
 }
 
@@ -52,12 +58,33 @@
   }
 }
 
-.cards-home {
+.cards-section {
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 100px;
-  margin-right: 0px;
-  margin-top: 10vh;
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cards-section-2 {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 202px);
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.three-cards-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 50px 100px;
 }
 
 #card-outershadow-home {
@@ -94,9 +121,6 @@
   // box-shadow: 5px 10px 20px red inset;
 }
 
-#cards-home {
-  position: relative;
-}
 
 .card-home img {
   height: 150px;
@@ -113,28 +137,26 @@
 
 .arrow-home {
   font-size: 75px;
-  margin-top: 95px;
   color: #31a2cf ;
   text-shadow: 0 0 5px #696969, 0 0 5px #ffffff;
 }
 
 
 #how {
-  padding-top: 140px;
-  font-size: 85px;
+  font-size: 65px;
+  padding-top: 20px;
 }
 
 // bellow is the CSS for the second scroll button ----------------------------------------------------------------------------------
 
 .scroll-down2 {
   height: 65px;
-  width: 37px;
+  width: 38px;
   border: 2px solid black;
   position: absolute;
-  left: 46%;
-  margin-top: 523px;
-  margin-right: -44px;
-  // bottom: 658px;
+  left: calc(50vw - 19px);
+  bottom: 40px;
+  margin-top: 267px;
   border-radius: 50px;
   cursor: pointer;
   background: rgba(174, 217, 229, .5)
@@ -156,7 +178,7 @@
 }
 
 .scroll-down2::after{
-  top: 30%;
+  top: calc(100vh-72px);
   animation-delay: .3s;
 }
 
@@ -197,7 +219,7 @@
 .call-to-action {
   text-align: center;
   position: absolute;
-  left: 44.5%;
+  left: calc(50vw - 107px);
   width: 214px;
   height: 54px;
   color: white;
@@ -220,8 +242,6 @@
 
 .call-to-action-2 {
   text-align: center;
-  position: absolute;
-  left: 41%;
   width: 300px;
   height: 54px;
   color: white;

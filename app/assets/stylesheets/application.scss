@@ -14,6 +14,10 @@
 @import "pages/index";
 
 
+html {
+  scroll-behavior: smooth;
+ }
+
 .flash {
   margin: 0;
   padding: 6px 14px;
